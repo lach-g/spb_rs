@@ -5,15 +5,7 @@ edition = "2021"
 license-file = "LICENSE"
 description = "Sparkplug-B client library"
 repository = "https://github.com/lach-g/spb_rs"
-keywords = [
-  "IoT",
-  "Sparkplug-B",
-  "Sparkplug",
-  "MQTT",
-  "protobuf",
-  "Tahu",
-  "messaging",
-]
+keywords = ["IoT", "Sparkplug-B", "MQTT", "Tahu", "messaging"]
 authors = ["Lachlan Greenland <lachlan.greenland@gmail.com>"]
 
 [build-dependencies]
