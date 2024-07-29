@@ -2,6 +2,19 @@
 name = "spb_rs"
 version = "0.1.0"
 edition = "2021"
+license-file = "LICENSE"
+description = "Sparkplug-B client library"
+repository = "https://github.com/lach-g/spb_rs"
+keywords = [
+  "IoT",
+  "Sparkplug-B",
+  "Sparkplug",
+  "MQTT",
+  "protobuf",
+  "Tahu",
+  "messaging",
+]
+authors = ["Lachlan Greenland <lachlan.greenland@gmail.com>"]
 
 [build-dependencies]
 protobuf-codegen = "3.5.0"
