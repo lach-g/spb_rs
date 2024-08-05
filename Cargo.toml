@@ -12,4 +12,5 @@ authors = ["Lachlan Greenland <lachlan.greenland@gmail.com>"]
 protobuf-codegen = "3.5.0"
 
 [dependencies]
+paho-mqtt = { version = "0.12.5", features = ["vendored-ssl"] }
 protobuf = "3.5.0"
