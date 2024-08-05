@@ -1,0 +1,47 @@
+# Roadmap
+
+## Sparkplug-B v3.0 Client Library
+
+- [Sparkplug v3.0 Specification Document (PDF)](https://sparkplug.eclipse.org/specification/version/3.0/documents/sparkplug-specification-3.0.0.pdf)
+
+### Key components
+
+1. Host Application
+2. Primary Host Application
+3. Edge Node
+4. Device
+
+### Host Application
+
+A Sparkplug Host Application is any Sparkplug MQTT client that consumes the real-time Sparkplug messages or any other data being published with proper permission and security.
+
+#### Features
+
+- Publish STATE messages
+- Subscribe to Edge Node(s) and Device(s)
+- Publish commands
+
+
+### Primary Host Application
+
+A Primary Host Application is an MQTT client application that subscribes to MQTT Sparkplug Edge Node originated messages. It is deemed primary by the Edge Node. An Edge Node may be configured to modify its behavior based on one specific Sparkplug Host Application being online or offline. This specific Host Application is referred to as the Edge Node’s Primary Host Application.
+
+#### Features
+
+- Superset of the Host Application features
+- Sequencing timers to catch out-of-sequence messages and force rebirth
+- Cache a metric structure
+
+### Edge Node
+
+MQTT Edge Node is any MQTT v3.1.1 or v5.0 compliant MQTT Client application that manages an MQTT session and provides the physical and/or logical gateway functions required to participate in the topic namespace and payload definitions.
+
+#### Features
+
+- Wait and store messages if Primary Host Application is configured
+- Disconnect if Primary Host Application is offline
+- Walk a list of MQTT Servers until the Primary Host Application STATE of online = true is found
+
+### Device
+
+The Device/Sensor represents any physical or logical device connected to the MQTT Edge Node providing any data, process variables or metrics.
