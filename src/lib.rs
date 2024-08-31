@@ -1,4 +1,9 @@
-pub use protobuf;
+// Private modules
 
-include!(concat!(env!("OUT_DIR"), "/protos/mod.rs"));
-pub use sparkplug_b::*;
+// Public modules
+pub mod edgenode;
+pub mod message;
+
+// Flatten
+pub use edgenode::*;
+pub use options::*;
